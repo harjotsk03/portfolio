@@ -1,0 +1,378 @@
+@font-face {
+    font-family: main;
+    src: url(./Cocogoose-Pro-Regular-trial.ttf);
+}
+@font-face {
+    font-family: main2;
+    src: url(./Cocogoose-Pro-Thin-trial.ttf);
+}
+@font-face {
+    font-family: main3;
+    src: url(./Cocogoose-Pro-Semilight-trial.ttf);
+}
+  
+@font-face {
+    font-family: arrow;
+    src: url(./Littlearrows-Regular.otf);
+}
+@font-face {
+    font-family: mainSecond;
+    src: url(./Nexa-Heavy.ttf);
+}
+  
+:root {
+    --color1: #0e0e0e;
+    --color2: #515151;
+    --color3: #949494;
+    --color4: #ececec;
+    --color5: #ffffff;
+}
+  
+body {
+    margin: 0;
+}
+  
+.logo{
+    width: 40px ;
+    height: auto;
+}
+  
+.hero-container {
+    position: relative;
+    height: 100vh;
+    background-color: var(--color1);
+    margin: 3vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    
+}
+  
+.corner {
+    position: absolute;
+    background-color: transparent;
+    color: var(--color4);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: main;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+  
+
+  
+.top-left {
+    top: 3vw;
+    left: 3vw;
+    overflow: hidden;
+    
+}
+  
+.top-right {
+    top: 3vw;
+    right: 3vw;
+}
+  
+.bottom-left {
+    bottom: 5vw;
+    left: 3vw;
+}
+  
+.bottom-right {
+    bottom: 5vw;
+    right: 3vw;
+}
+  
+.main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    height: max-content;
+    width: max-content;
+    margin-left: 10vw;
+}
+  
+.main-title {
+    color: var(--color5);
+    margin: 0 0.75vw;
+    padding: 0; 
+    font-size: 13vw;
+    line-height:12vmax;
+    font-family: mainSecond;
+}
+  
+.time{
+    color: var(--color3);
+    font-family: mainSecond;
+    text-transform: lowercase;
+    font-size: 0.8vw;
+    margin-left: 1.5vw;
+}
+
+.date-and-resume{
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+  
+.main-title-container button {
+    margin-left: 1.5vw;
+    border-radius: 4000px;
+    color: var(--color3);
+    background-color: var(--color1);
+    border: 2px solid var(--color4);
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    transition: 0.4s ease-in-out;
+    font-family: mainSecond;
+    font-size: 0.8vw;
+}
+
+.navbar a{
+    color: var(--color5);
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar a:hover{
+    color: var(--color2);
+    transform: scale(1.15);
+    cursor: pointer;
+}
+  
+.main-title-container button:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+    background-color: var(--color4);
+    border: 2px solid var(--color4);
+    color: var(--color1);}
+  
+.navbar {
+    display: flex;
+    justify-content: space-evenly; /* or space-around for more space on the sides */
+    align-items: flex-start;
+    width: 100%;
+    text-decoration: none;
+    color: var(--color5);
+}
+  
+.arrow {
+    margin-bottom: -80vh;
+    position: absolute;
+    z-index: 9999999;
+    margin-left: calc(90vw / 2);
+    width: max-content;
+    height: max-content;
+    color: var(--color3);
+    font-family: main3;
+    cursor: pointer;
+    animation: slideAndFade 2s infinite; /* Adjust the duration as needed */
+  }
+  
+.arrow img{
+    width: 40px;
+    height: 40px;
+}
+  
+@keyframes slideAndFade {
+    0% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+}
+
+
+.projectSection {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    gap: -10vw;
+    padding: 1vw 1vw 2vw 1vw;
+    margin: 0vw 0vw 0vw 0vw;
+    background-color: var(--color3);
+}
+
+.projectCard {
+    margin-top: 1vw;
+    margin: 1vw;
+    border-radius: 20px;
+    background-color: var(--color4);
+    height: 350px; /* Fix height to 15vh */
+    min-width: 250px;
+    max-width: 250px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.projectCard:hover{
+    background-color: var(--color3);
+    cursor: pointer;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+@media (max-width: 768px) {
+    .hero-container {
+      background-color: var(--color4);
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3vw;
+      border-radius: 30px;
+    }
+  
+    .logo{
+      width: 30px ;
+      height: auto;
+    }
+  
+    .corner {
+      position: absolute;
+      background-color: transparent;
+      color: #fff;
+      border-radius: 0%;
+      width: max-content;
+      letter-spacing: 0vw;
+    }
+  
+    .corner:hover{
+      color: white;
+      transform: scale(1);
+      cursor: default;
+    }
+  
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+      margin: 3vw;
+      top: 2vh;
+      left: 0;
+      position: relative;
+      width: max-content;
+    }
+  
+    .main-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+      height: 100%;
+      margin-bottom: 0vw;
+      margin-left: 0vw;
+    }
+  
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .corner {
+      width: auto;
+    }
+  
+    .main-title {
+      color: #fff;
+      font-size: 2rem;
+      margin: 0;
+      padding: 0; 
+      font-size: 25vw;
+      line-height: 11vh;
+    }
+  
+    .arrow {
+      margin-top: -18vh;
+      display: flex;
+      margin-left: calc(50vw);
+      z-index: 9999999;
+      width: max-content;
+      height: max-content;
+      font-family: arrow;
+      animation: slideAndFade 3s infinite; /* Adjust the duration as needed */
+    }
+  
+    .arrow img{
+      width: 0;
+      height: 0;
+    }
+  
+    .time{
+      color: var(--color3);
+      font-family: mainSecond;
+      text-transform: lowercase;
+      font-size: 2vw;
+      margin-left: 1.5vw;
+      margin-top: -2vw;
+    }
+
+    .projectSection{
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        margin: 42vw 0vw 3vw 0vw;
+    }
+
+    .projectCard{
+        margin: 1vw;
+        border-radius: 20px;
+        background-color: var(--color2);
+        flex: 0 0 250px; /* Fix width to 20vw with margin subtracted */
+        height: 350px; /* Fix height to 15vh */
+    }
+  
+}
+  
