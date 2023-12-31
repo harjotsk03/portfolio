@@ -65,8 +65,16 @@ html, body {
     font-family: main;
     transition: 0.3s ease-in-out;
     text-decoration: none;
+    z-index: 9999999;
+
 }
 
+.overlay{
+  position: absolute;
+  display: flex;
+  transform: scale(1.5);
+  opacity: 15%;
+}
 
   
 .top-left {
@@ -93,14 +101,14 @@ html, body {
   
 .main-title-container {
     display: flex;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     height: max-content;
     width: max-content;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: -35vw;
+    z-index: 9999999;
 }
   
 .main-title {
@@ -121,11 +129,14 @@ html, body {
 }
 
 .date-and-resume{
+  margin-left: 1.5vw;
   line-height: 1vmax;
   display:block;
   align-items: center;
   justify-content: center;
   width: max-content;
+  z-index: 9999999;
+
 }
 
   
@@ -211,6 +222,24 @@ html, body {
       transform: translateY(-10px);
       opacity: 0;
     }
+}
+
+.imageDesk{
+  display: flex;
+  justify-content: right;
+  width: 80vw;
+  margin-left: 10vw;
+  z-index: 9999999;
+}
+
+.imageDesk img{
+  width: 40vw;
+  mix-blend-mode:hard-light;
+  height: auto;
+  position: absolute;
+  margin-top: -32vmax;
+  z-index: 9999999;
+  opacity: 80%;
 }
 
 
@@ -328,7 +357,7 @@ html, body {
       justify-content: center;
       height: 100%;
       margin-bottom: 0vw;
-      margin-left: 0vw;
+      margin-left: 8vmin;
       width: 100%;
     }
   
@@ -396,6 +425,28 @@ html, body {
     #resumeButton:hover{
       font-size: 3vw;
       transform: scale(1);
+    }
+
+    .overlay{
+      opacity: 40%;
+      transform: scale(1.15);
+    }
+
+    .imageDesk{
+      display: none;
+      justify-content: right;
+      width: 80vw;
+      margin-left: 10vw;
+      z-index: 9999999;
+    }
+    
+    .imageDesk img{
+      width: 40vw;
+      mix-blend-mode:exclusion;
+      height: auto;
+      position: absolute;
+      margin-top: -32vmax;
+      z-index: 9999999;
     }
 
     .projectSection{
