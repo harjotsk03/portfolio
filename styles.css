@@ -28,14 +28,16 @@
     --color5: #ffffff;
 }
   
-body {
+html, body {
     margin: 0;
+    padding: 0;
 }
   
 .logo{
     width: 40px ;
     height: auto;
 }
+
   
 .hero-container {
     position: relative;
@@ -49,8 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-    
+    align-items: center;
 }
   
 .corner {
@@ -65,7 +66,7 @@ body {
     transition: 0.3s ease-in-out;
     text-decoration: none;
 }
-  
+
 
   
 .top-left {
@@ -92,12 +93,14 @@ body {
   
 .main-title-container {
     display: flex;
+    text-align: center;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
     height: max-content;
     width: max-content;
-    margin-left: 10vw;
+    margin-right: auto;
+    margin-left: auto;
 }
   
 .main-title {
@@ -105,26 +108,28 @@ body {
     margin: 0 0.75vw;
     padding: 0; 
     font-size: 13vw;
-    line-height:12vmax;
+    line-height:11vmax;
     font-family: mainSecond;
 }
+
   
 .time{
     color: var(--color3);
     font-family: mainSecond;
     text-transform: lowercase;
-    font-size: 0.8vw;
-    margin-left: 1.5vw;
+    font-size: 0.8vw;    
 }
 
 .date-and-resume{
-  display: flex;
+  line-height: 1vmax;
+  display:block;
   align-items: center;
+  justify-content: center;
   width: max-content;
 }
+
   
 .main-title-container button {
-    margin-left: 1.5vw;
     border-radius: 4000px;
     color: var(--color3);
     background-color: var(--color1);
@@ -132,7 +137,16 @@ body {
     padding: 0.5vw 1vw 0.5vw 1vw;
     transition: 0.4s ease-in-out;
     font-family: mainSecond;
-    font-size: 0.8vw;
+    font-size: 1vw;
+}
+
+#resumeButton{
+  transform: scale(1);
+  transition: 0.4s ease-in-out;
+}
+
+#resumeButton:hover{
+  transform: scale(0.9);
 }
 
 .navbar a{
@@ -141,6 +155,7 @@ body {
     transition: 0.4s ease-in-out;
 }
 
+
 .navbar a:hover{
     color: var(--color2);
     transform: scale(1.15);
@@ -148,11 +163,12 @@ body {
 }
   
 .main-title-container button:hover{
-    transform: scale(1.15);
+    transform: scale(1.5);
     cursor: pointer;
     background-color: var(--color4);
     border: 2px solid var(--color4);
-    color: var(--color1);}
+    color: var(--color1);
+}
   
 .navbar {
     display: flex;
@@ -162,12 +178,13 @@ body {
     text-decoration: none;
     color: var(--color5);
 }
+
+
   
 .arrow {
     margin-bottom: -80vh;
     position: absolute;
     z-index: 9999999;
-    margin-left: calc(90vw / 2);
     width: max-content;
     height: max-content;
     color: var(--color3);
@@ -224,8 +241,7 @@ body {
     cursor: pointer;
 }
   
-  
-  
+
   
   
   
@@ -263,7 +279,7 @@ body {
   
 @media (max-width: 768px) {
     .hero-container {
-      background-color: var(--color4);
+      background-color: var(--color1);
       position: relative;
       height: 90vh;
       overflow: hidden;
@@ -313,6 +329,7 @@ body {
       height: 100%;
       margin-bottom: 0vw;
       margin-left: 0vw;
+      width: 100%;
     }
   
     .navbar {
@@ -325,6 +342,15 @@ body {
     .corner {
       width: auto;
     }
+
+    .corner a{
+      font-size: 3vw;
+    }
+    
+    .corner a:hover{
+      color: white;
+      transform: none;
+    }
   
     .main-title {
       color: #fff;
@@ -332,7 +358,7 @@ body {
       margin: 0;
       padding: 0; 
       font-size: 25vw;
-      line-height: 11vh;
+      line-height:10vmax;
     }
   
     .arrow {
@@ -355,9 +381,21 @@ body {
       color: var(--color3);
       font-family: mainSecond;
       text-transform: lowercase;
-      font-size: 2vw;
-      margin-left: 1.5vw;
-      margin-top: -2vw;
+      font-size: 2.5vw;
+      margin-top: 0vw;
+    }
+
+
+    #resumeButton{
+      padding: 1vw 3vw 1vw 3vw;
+      font-size: 3vw;
+      background-color: var(--color1);
+      color: var(--color5);
+    }
+
+    #resumeButton:hover{
+      font-size: 3vw;
+      transform: scale(1);
     }
 
     .projectSection{
@@ -373,6 +411,7 @@ body {
         flex: 0 0 250px; /* Fix width to 20vw with margin subtracted */
         height: 350px; /* Fix height to 15vh */
     }
+
   
 }
   

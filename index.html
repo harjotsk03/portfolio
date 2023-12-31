@@ -6,30 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harjot Kooner Portfolio</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="hero-container">
+    <div class="hero-container" 
+    data-aos="fade"
+            data-aos-offset="0"
+            data-aos-delay="0"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="true">
         <div class='navbar'>
-            <div class="corner top-left">
+            <div class="corner top-left"
+            data-aos="zoom-in"
+            data-aos-offset="0"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="true">
                 <img class='logo' src="logoWebsite.svg" id="reloadButton" />
             </div>
-            <div class="corner top-right">
+            <div class="corner top-right"
+            data-aos="zoom-in"
+            data-aos-offset="0"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="true">
                 <a href="#" id="projectsLink">projects</a>
             </div>
-            <div class="corner bottom-left">
+            <div class="corner bottom-left"
+            data-aos="zoom-in"
+            data-aos-offset="0"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="true">
                 <a href="#" id="aboutLink">about</a>
             </div>
-            <div class="corner bottom-right">
+            <div class="corner bottom-right"
+            data-aos="zoom-in"
+            data-aos-offset="0"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="true">
                 <a href="#" id="contactLink">contact</a>
             </div>    
         </div>
         <div class="main-title-container">
-            <h1 class="main-title">harjot <br> kooner</h1>
+            <h1 class="main-title"
+            data-aos="fade-up"
+            data-aos-offset="0"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="true">
+            harjot <br> kooner</h1>
             <div class="date-and-resume">
-                <button id="resumeButton">download resume</button>
-                <div class='time'>
+                <div class='time'
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="true">
+                    <h2>vancouver based developer and designer</h2>
                     <h2 id="vancouverTime"></h2>
                 </div>
+                <button id="resumeButton"
+                data-aos="zoom-in"
+                data-aos-offset="0"
+                data-aos-delay="700"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="true"
+                >download resume</button>
             </div>
         </div>
         <div class='arrow'>
@@ -42,5 +102,33 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+// You can also pass an optional settings object
+// below listed default settings
+    AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 0, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: true, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+
+    });
+    </script>
 </body>
 </html>
