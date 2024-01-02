@@ -34,6 +34,12 @@
     --color3: #949494;
     --color4: #ececec;
     --color5: #ffffff;
+
+    --theme1: #8f78d9;
+    --theme2: #6a12c2;
+    --theme3: #590d77;
+    --theme4: #5c425b;
+    --theme5: #230b3b;
 }
   
 html, body {
@@ -150,8 +156,8 @@ html, body {
   
 .main-title-container button {
     border-radius: 4000px;
-    color: var(--color3);
-    background-color: var(--color1);
+    color: var(--theme1);
+    background-color: transparent;
     border: 2px solid var(--color4);
     padding: 0.5vw 1vw 0.5vw 1vw;
     transition: 0.4s ease-in-out;
@@ -176,7 +182,7 @@ html, body {
 
 
 .navbar a:hover{
-    color: var(--color2);
+    color: var(--theme1);
     transform: scale(1.15);
     cursor: pointer;
 }
@@ -241,6 +247,7 @@ html, body {
 }
 
 .imageDesk img{
+  filter: grayscale(0%) brightness(110%);
   width: 40vw;
   mix-blend-mode:hard-light;
   height: auto;
@@ -248,34 +255,20 @@ html, body {
   margin-top: -32vmax;
   z-index: 9999999;
   opacity: 80%;
+  transition: 0.75s ease-in-out;
 }
 
+.imageDesk img:hover{
+  transform: matrix(1, 0, 0, 1.25, 0, 0);
+}
 
 .projectSection {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    gap: -10vw;
-    padding: 1vw 1vw 2vw 1vw;
-    margin: 0vw 0vw 0vw 0vw;
-    background-color: var(--color3);
-}
-
-.projectCard {
-    margin-top: 1vw;
-    margin: 1vw;
-    border-radius: 20px;
-    background-color: var(--color4);
-    height: 350px; /* Fix height to 15vh */
-    min-width: 250px;
-    max-width: 250px;
-    transition: 0.3s ease-in-out;
-}
-
-
-.projectCard:hover{
-    background-color: var(--color3);
-    cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--color1);
+    margin-bottom: 5vh;
 }
   
 
@@ -292,8 +285,7 @@ html, body {
   
   
   
-  
-  
+
   
   
   
@@ -458,18 +450,9 @@ html, body {
     }
 
     .projectSection{
-        padding-top: 10vw;
-        padding-bottom: 10vw;
-        margin: 42vw 0vw 3vw 0vw;
+
     }
 
-    .projectCard{
-        margin: 1vw;
-        border-radius: 20px;
-        background-color: var(--color2);
-        flex: 0 0 250px; /* Fix width to 20vw with margin subtracted */
-        height: 350px; /* Fix height to 15vh */
-    }
 
   
 }

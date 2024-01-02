@@ -52,4 +52,17 @@ const intervalId = setInterval(() => {
 
 
 
-
+function downloadPDF() {
+    // Create a link element
+    var link = document.createElement('a');
+    // Set the href attribute to the path of your PDF file
+    link.href = 'harjotKoonerResume.pdf';
+    // Set the download attribute with a desired filename
+    link.download = 'Harjot Kooner Resume.pdf';
+    // Append the link to the body (required for Firefox)
+    document.body.appendChild(link);
+    // Trigger a click on the link to start the download
+    link.click();
+    // Remove the link from the body (cleanup)
+    document.body.removeChild(link);
+}
