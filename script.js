@@ -66,3 +66,31 @@ function downloadPDF() {
     // Remove the link from the body (cleanup)
     document.body.removeChild(link);
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollToTopButton = document.getElementById("scrollToTopButton");
+  
+    window.addEventListener("scroll", function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopButton.style.display = "block";
+      } else {
+        scrollToTopButton.style.display = "none";
+      }
+    });
+  
+    scrollToTopButton.addEventListener("click", function () {
+      smoothScrollToTop();
+    });
+  
+    function smoothScrollToTop() {
+      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+  
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothScrollToTop);
+        window.scrollTo(0, currentScroll - currentScroll / 16);
+      }
+    }
+  });
+  
+

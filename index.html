@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harjot Kooner Portfolio</title>
     <link href="styles.css" rel="stylesheet">
+    <link href="project.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
@@ -26,7 +27,7 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
             data-aos-once="true">
-                <img class='logo' src="logoWebsite.svg" id="reloadButton" />
+                <a href="index.html"><img class='logo' src="logoWebsite.svg" id="reloadButton" /></a>
             </div>
             <div class="corner top-right"
             data-aos="zoom-in"
@@ -36,7 +37,7 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
             data-aos-once="true">
-                <a href="#" id="projectsLink">projects</a>
+                <a onclick="smoothScrollToSection('projects');" id="projectsLink">projects</a>
             </div>
             <div class="corner bottom-left"
             data-aos="zoom-in"
@@ -46,7 +47,7 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
             data-aos-once="true">
-                <a href="#" id="aboutLink">about</a>
+                <a onclick="smoothScrollToSection('about');" id="aboutLink">about</a>
             </div>
             <div class="corner bottom-right"
             data-aos="zoom-in"
@@ -56,7 +57,7 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
             data-aos-once="true">
-                <a href="#" id="contactLink">contact</a>
+                <a onclick="smoothScrollToSection('contact');" id="contactLink">contact</a>
             </div>    
         </div>
         <div class="main-title-container">
@@ -68,7 +69,7 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
             data-aos-once="true">
-            harjot <br> <span style="color: #8234d1;">kooner</span></h1>
+            harjot <br> <span style="color: #0056b3;">kooner.</span></h1>
             <div class="date-and-resume">
                 <div class='time'
                 data-aos="fade-right"
@@ -110,11 +111,30 @@
         </div>
         <img class="overlay" src="overlay1.png">
     </div>
+
+    <div class="scroll-to-top" id="scrollToTopButton">
+        <span><img src="./arrow.svg"></span>
+    </div>
     
 
-    <div class='projectSection'>
+    <section id="projects" class="projectSection">
+        <div class="projectTitle">Projects Section</div>
+    </section>
+    
+    <section id="about" class="aboutSection">
+        <div class="aboutTitle">About Section</div>
+    </section>
+    
+    <section id="contact" class="contactSection">
+        <div class="contactTitle">Contact Section</div>
+    </section>
 
-    </div>
+    <footer>
+        <div><span id="footerFirst">Harjot Singh </span>Kooner</div>
+        <div>
+
+        </div>
+    </footer>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -144,6 +164,22 @@
     mirror: false, // whether elements should animate out while scrolling past them
 
     });
+    </script>
+    <script>
+        function smoothScrollToSection(sectionId) {
+            var targetSection = document.getElementById(sectionId);
+
+            if (targetSection) {
+                var offset = targetSection.offsetTop - window.innerHeight * 0.02; // 2vh as offset
+
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth',
+                    duration: 5000, // Adjust the duration as needed (in milliseconds)
+                    easing: 'ease-out'
+                });
+            }
+        }
     </script>
 </body>
 </html>
