@@ -104,15 +104,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const products = [
     {
-        image: 'image1.avif',
+        image: 'vision.png',
         title: 'Vision Auto Detailing Website',
         description: 'Designed and developed a professional website for a mobile auto detailing company.',
         projectLink: 'index.html'
     },
     {
-        image: 'image2.png',
+        image: 'worksafe.png',
         title: 'Worksafe Website Redesign',
-        description: 'Designed and developed a professional website for a mobile auto detailing company.',
+        description: 'Redesigned the website for government run WorkSafeBC. Full project and research available.',
         projectLink: 'index.html'
     },
     
