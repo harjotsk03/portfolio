@@ -32,7 +32,7 @@
     --color1: #0e0e0e;
     --color2: #515151;
     --color3: #949494;
-    --color4: #ececec;
+    --color4: #d6d6d6;
     --color5: #ffffff;
 
     --theme1: #4885c6;
@@ -263,23 +263,95 @@ html, body {
 }
 
 
+
+
+
+#projects{
+  display: block;
+}
+
+#product-container{
+  margin-left: 5vmin;
+  white-space: wrap; /* Prevent cards from wrapping to the next line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 0px 10px 40px 10px;
+  display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: left;
+    
+}
+
 .projectSection {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 30px;
-  width: 90%;
-height: 50vh;
-background-color: var(--color1);
+  border-radius: 0px;
+  width: 100%;
+height: max-content;
+background-color: transparent;
 margin-bottom: 5vh;
 }
 
 .projectTitle{
-  font-size: 3vmin;
+  font-size: 4vmin;
   font-family: mainSecond;
-  color: var(--color4);
+  color: var(--color1);
   width: max-content;
-  padding: 2vw 3vw;
+  padding: 2vw 5vw;
+  margin-bottom: 0;
+  padding-bottom: 1vh;
 }
+
+
+.product-card {
+  display: inline-block;
+  background-color: var(--theme4);
+  color: var(--color5);
+  padding: 15px;
+  margin: 20px;
+  text-align: left;
+  border-radius: 20px;
+  overflow: hidden;
+  width: calc(33.33% - 50px); /* Set width to one-third minus margin */
+  box-sizing: border-box;
+  
+}
+
+.product-card h3{
+  font-family: mainSecond;
+  margin-top: 1vh;
+  margin-bottom: -1vh;
+}
+
+.product-card p{
+  font-family: mainSecondLight;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(50%);
+  border-radius: 10px;
+}
+.product-card button {
+  border-radius: 20px;
+  border: none;
+  padding: 0.5vw 1vw;
+  color: var(--theme4);
+  font-family: mainSecond;
+  transition: 0.3s ease-in-out;
+}
+
+.product-card button:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 .aboutSection{
   border-radius: 30px;
@@ -294,12 +366,21 @@ margin-bottom: 5vh;
 }
 
 .aboutTitle{
-  font-size: 3vmin;
+  font-size: 4vmin;
   font-family: mainSecond;
   color: var(--color4);
   width: max-content;
   padding: 2vw 3vw;
 }
+
+
+
+
+
+
+
+
+
 
 .contactSection{
   border-radius: 30px;
@@ -314,18 +395,26 @@ margin-bottom: 5vh;
 }
 
 .contactTitle{
-  font-size: 3vmin;
+  font-size: 4vmin;
   font-family: mainSecond;
   color: var(--color4);
   width: max-content;
   padding: 2vw 3vw;
 }
 
+
+
+
+
+
+
+
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0056b3;
+  background-color: var(--color2);
   color: #fff;
   font-size: 18px;
   padding: 10px 10px 5px 10px;
@@ -333,7 +422,7 @@ margin-bottom: 5vh;
   cursor: pointer;
   display: none;
   border-radius: 50px;
-  transition: background-color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .scroll-to-top img{
@@ -345,6 +434,7 @@ margin-bottom: 5vh;
 .scroll-to-top:hover {
   cursor: pointer;
   background-color: #4885c6;
+  transform: scale(1.1);
 }
 
 footer{
@@ -404,6 +494,7 @@ footer{
       align-items: center;
       margin: 3vw;
       border-radius: 30px;
+      margin-bottom: 3vh;
     }
   
     .logo{
@@ -540,19 +631,50 @@ footer{
     .projectSection {
       margin-left: auto;
       margin-right: auto;
-      border-radius: 30px;
-      width: 85%;
-    height: 50vh;
-    background-color: var(--color1);
-    margin-bottom: 5vh;
-    }
+      border-radius: 0px;
+      width: 100%;
+    height: max-content;
+    padding-bottom: 2.5vh;
+    background-color: transparent;
+  }
     
     .projectTitle{
-      font-size: 6vmin;
+      font-size: 8vmin;
       font-family: mainSecond;
-      color: var(--color4);
+      color: var(--color1);
       width: max-content;
       padding: 4vw 6vw;
+      padding-bottom: 0;
+      margin-bottom: 0
+    }
+
+    #product-container{
+      margin-left: -1vmin;
+      white-space: nowrap; /* Prevent cards from wrapping to the next line */
+      overflow-x: auto; /* Enable horizontal scrolling */
+      padding: 10px;
+      display: block;
+      flex-wrap: wrap; /* Allow cards to wrap to the next line */
+      justify-content: left;
+    }
+
+    .product-card {
+      width: auto; /* Set width to one-third minus margin */
+      white-space: normal;
+      height: auto;
+    }
+
+
+    .product-card button{
+      padding: 1vw 3vw;
+    }
+
+    .product-card button:hover{
+      transform: scale(1);
+    }
+
+    .product-card p{
+      white-space: normal; /* Add this rule to allow wrapping */
     }
     
     .aboutSection{
@@ -608,6 +730,7 @@ footer{
       display: none;
       border-radius: 50px;
       transition: background-color 0.3s ease-in-out;
+      transform: scale(1);
     }
     
     .scroll-to-top img{
@@ -617,8 +740,9 @@ footer{
     }
     
     .scroll-to-top:hover {
-      cursor: pointer;
-      background-color: #4885c6;
+      cursor: default;
+      background-color: #0056b3;
+      transform: scale(1);
     }
     
     footer{

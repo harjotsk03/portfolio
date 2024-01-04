@@ -94,3 +94,66 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
+
+
+
+
+
+
+
+
+  const products = [
+    {
+        image: 'image1.avif',
+        title: 'Vision Auto Detailing Website',
+        description: 'Designed and developed a professional website for a mobile auto detailing company.',
+        projectLink: 'index.html'
+    },
+    {
+        image: 'image2.png',
+        title: 'Worksafe Website Redesign',
+        description: 'Designed and developed a professional website for a mobile auto detailing company.',
+        projectLink: 'index.html'
+    },
+    
+];
+
+// Function to create a product card
+function createProductCard(product, index) {
+    const card = document.createElement('div');
+    card.classList.add('product-card');
+    card.setAttribute('data-aos', 'zoom-in'); // Set AOS attribute for individual cards
+    card.setAttribute('data-aos-offset', '0');
+    card.setAttribute('data-aos-delay', 500 * index);
+    card.classList.add('product-card');
+
+    // Create image element
+    const image = document.createElement('img');
+    image.src = product.image;
+    card.appendChild(image);
+
+    // Create title element
+    const title = document.createElement('h3');
+    title.textContent = product.title;
+    card.appendChild(title);
+
+    // Create description element
+    const description = document.createElement('p');
+    description.textContent = product.description;
+    card.appendChild(description);
+
+    // Create "View Project" button
+    const viewProjectButton = document.createElement('button');
+    viewProjectButton.textContent = 'View Project';
+    viewProjectButton.addEventListener('click', function () {
+        // Redirect to the project page (you can customize this logic)
+        window.location.href = product.projectLink;
+    });
+    card.appendChild(viewProjectButton);
+
+    // Append the product card to the container
+    document.getElementById('product-container').appendChild(card);
+}
+
+// Loop through the products and create product cards
+products.forEach(createProductCard);
