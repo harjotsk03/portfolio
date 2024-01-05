@@ -109,7 +109,7 @@
             <img src="image1.png">
         </div>
         <div class='arrow'>
-            <img src="arrow.svg"/>
+            <a onclick="smoothScrollToSection('projects');"><img src="arrow.svg"/></a>
         </div>
         <img class="overlay" src="overlay1.png">
     </div>
@@ -269,6 +269,43 @@
     data-aos-mirror="false"
     data-aos-once="true">
         <div class="contactTitle">lets <span style="color: #4885c6;">connect</span></div>
+        <div class="contactForm">
+            <form>
+                <!--- <input placeholder="full name" type="text" required> --->
+                <div class="input-container">
+                    <input type="text" id="name" required>
+                    <label for="name">full name</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" required>
+                    <label for="email">email</label>
+                </div>                
+                <div class="input-container">
+                    <input type="tel" id="phoneNumber" required>
+                    <label for="phoneNumber">phone number</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="message" required>
+                    <label for="message">message</label>
+                </div>                
+                <button>send your message</button>
+            </form>
+                <div class="contactFormRight">
+                    <div class="socialLine">
+                        <a target="_blank" href="https://www.instagram.com/7harjotsk/"><img src="./iconmonstr-instagram-14.png"></a>
+                        7harjotsk
+                    </div>
+                    <div class="socialLine">
+                        <a target="_blank" href="https://www.linkedin.com/in/harjotsingh7/"><img src="./iconmonstr-linkedin-4.png"></a>
+                        harjotsingh7
+                    </div>
+                    <div class="socialLine">
+                        <a target="_blank" href="https://github.com/harjotsk03/"><img src="./iconmonstr-github-4.png"></a>
+                        harjotsk03
+                    </div>
+                </div>
+            </div>  
+        </div>
     </section>
 
     <footer>
