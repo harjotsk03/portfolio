@@ -50,7 +50,7 @@ const Home = () => {
   );
   return (
     <>
-      <div className="h-max lg:px-40 pt-24 w-full z-20 flex flex-col">
+      <div className="h-max lg:px-40 pt-0 lg:pt-24 w-full z-20 flex flex-col">
         <div className="w-full flex lg:bg-gradient-to-b lg:from-[rgb(220,220,220,0.5)] lg:to-transparent flex-col gap-5 lg:px-32 px-10 py-36 h-max rounded-t-[6vw]">
           <div className="flex flex-col gap-8 items-start">
             <h1 className="poppins-semibold text-8xl">harjot singh</h1>
