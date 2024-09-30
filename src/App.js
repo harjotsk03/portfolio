@@ -9,6 +9,7 @@ import Home from "./pages/Home"; // Assuming you have a Home page
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Projects from "./pages/Projects";
 import logo from "./images/logoWebsite.svg";
+import Switch from "./components/Switch";
 
 const App = () => {
   AOS.init();

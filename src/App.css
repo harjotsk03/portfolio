@@ -61,6 +61,7 @@
 
 html,
 body {
+
   background-color: white;
 }
 
@@ -85,6 +86,19 @@ body {
 }
 
 
+.fadeupnormal {
+  animation: fadeupnormal 1s forwards; /* Adjust timing and effects as necessary */
+}
+
+
+.fadeupnormalleft {
+  animation: fadeupnormalleft 1s forwards; /* Adjust timing and effects as necessary */
+}
+
+.fadedownnormal {
+  animation: fadedownnormal 1s forwards; /* Adjust timing and effects as necessary */
+}
+
 .fadeUp {
   animation: fadeOutUp 1s forwards; /* Adjust timing and effects as necessary */
 }
@@ -93,6 +107,39 @@ body {
   animation: fadeOut 1s forwards; /* Optional for main content fade-out */
 }
 
+@keyframes fadeupnormal {
+  0% {
+    opacity: 0;
+    transform: translateY(0);  
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadeupnormalleft {
+  0% {
+    opacity: 0;
+    transform: translateY(0);  
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadedownnormal {
+  0% {
+    opacity: 1;
+    transform: translateY(0);  
+  }
+  100% {
+    opacity: 0;
+  
+  }
+
+}
 @keyframes fadeOutUp {
   0% {
     opacity: 1;
@@ -100,7 +147,7 @@ body {
   }
   100% {
     opacity: 0;
-    transform: translateY(-20px);
+
   }
 }
 
@@ -141,4 +188,29 @@ body {
   border-bottom: 0.5px rgb(255, 255, 255, 0.3) solid;
   border-right: 0.5px rgb(255, 255, 255, 0.3) solid;
   cursor: pointer;
+}
+
+
+/* In your CSS file (e.g., App.css) */
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9); /* Optional scaling for a nice effect */
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Adjust timing as needed */
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9); /* Optional scaling for a nice effect */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Adjust timing as needed */
 }
